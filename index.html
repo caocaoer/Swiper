@@ -14,7 +14,8 @@
             padding: 0;
         }
         .swiper-container{
-            
+            width: 500px;
+            border: 1px solid;
         }
         .swiper-slide{
             border: 1px solid;
@@ -24,14 +25,10 @@
             height: 200px;
             right: 50px;
             z-index: 1;
-/*            margin-right: 50px;*/
-/*            right: 89px;*/
         }
         .swiper-slide-active{
             right: 0 !important;
             left: 50px;
-            
-/*            margin-right: 0 !important;*/
         }
         
         .swiper-slide-next{
@@ -39,7 +36,6 @@
             margin-top: 0;
             height: 400px;
             z-index: 9999;
-/*            margin-right: 0 !important;*/
             left: 0 !important;
             right: 0 !important;
         }
@@ -52,31 +48,26 @@
 <body>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><!--<img src="img/xiaoxin.jpg">-->11</div>
-            <div class="swiper-slide"><!--<img src="img/xiaoxin.jpg">-->22</div>
-            <div class="swiper-slide"><!--<img src="img/xiaoxin.jpg">-->33</div>
+            <div class="swiper-slide"><img src="img/xiaoxin.jpg">11</div>
+            <div class="swiper-slide"><img src="img/xiaoxin.jpg">22</div>
+            <div class="swiper-slide"><img src="img/xiaoxin.jpg">33</div>
         </div>
     </div>
-    <script>
-//        var mySwiper = new Swiper('.swiper-container', {
-//            autoplay: 5000, //可选选项，自动滑动
-//            loop: true,
-//        })
-        
-        
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        slidesPerView: 3,
-        paginationClickable: true,
-        loop: true,onSlideChangeEnd: function(swiper){
-            var index = swiper.activeIndex-1;
-//            if(swiper.activeIndex > 6 || swiper.activeIndex <= 0){
-//                index = 1;
-//            }
-            console.log(index); 
-        }
-//        spaceBetween: 30
-    });
+    <script>           
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 3,
+//            width: 200,
+//            height: 300,
+            paginationClickable: true,
+            loop: true,onSlideChangeEnd: function(swiper){
+                var index = swiper.activeIndex-1;
+    //            if(swiper.activeIndex > 6 || swiper.activeIndex <= 0){
+    //                index = 1;
+    //            }
+                console.log(index); 
+            }
+        });
     
     </script>
 </body>
