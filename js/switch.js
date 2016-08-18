@@ -23,7 +23,8 @@
             slidesPerView: 3,
             slideToClickedSlide:true,
             watchActiveIndex: true,
-            loop: true
+            loop: true,
+            loopedSlides: 8, //解决loop滑动到最后一个问题
         });
     };
 
